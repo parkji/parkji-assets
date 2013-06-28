@@ -3,3 +3,48 @@
  *
  * CSS classes and styles related to page structure
  */
+
+.wrapper {
+    margin: auto;
+    width: 100%;
+    padding: 0 0.5em;
+    @include prefix(box-sizing, border-box);
+}
+
+/** HEADER **/
+.site-header {
+    font-size: 2rem;
+    line-height: $lineHeight; /* Due to use of Fenix font */
+    margin-bottom: 0.75em;
+    text-align: center;
+}
+
+/** NAV **/
+.nav {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+    .nav > li, .nav > li > a {
+        display:inline-block;
+        *display:inline;
+        zoom:1;
+    }
+.site-nav {
+    text-align: center;
+}
+    .site-nav li {
+        margin-right: $standardSpacing;
+    }
+
+/** FOOTER **/
+.site-footer {
+    text-align: center;
+    position: relative;
+    padding-top: $standardSpacing;
+}
+
+/* CONTENT */
+.content {
+    margin-bottom: 1.4375em;
+}
