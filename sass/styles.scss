@@ -5,9 +5,10 @@
 @import "../components/normalize-scss/_normalize";
 
 /**
- * include vars
+ * Include vars & mixins
  */
 @import "vars";
+@import "mixins";
 
 /**
  * Include UI styles
