@@ -1,0 +1,12 @@
+{
+  "name": "parkjiAssets",
+  "version": "0.0.1",
+  "dependencies": {
+    "normalize-css": "~2.1.2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
