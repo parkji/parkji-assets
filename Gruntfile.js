@@ -10,9 +10,19 @@ module.exports = function(grunt) {
                     'web/css/styles.min.css': 'sass/styles.scss'
                 }
             }
+        },
+        concat: {
+            dist: {
+                src: [
+                    'components/html5shiv/dist/html5shiv.js',
+                    'components/respond/respond.min.js'
+                ],
+                dest: 'web/js/polyfills.js'
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.registerTask('default', ['sass']);
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.registerTask('default', ['sass', 'concat']);
 };
