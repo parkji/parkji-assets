@@ -25,6 +25,13 @@ h1, h2, h3, h4 {
     color: $alternateColour;
     text-align: center;
 }
+h1 {
+    @media screen and (min-width: $desktop) {
+        font-size: 3rem;
+        line-height: $lineHeight;
+        margin: 0 0 1em;
+    }
+}
 p, ul, ol {
     margin: 0 0 $standardSpacing;
 }

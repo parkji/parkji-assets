@@ -9,6 +9,12 @@
     width: 100%;
     padding: 0 0.5em;
     @include prefix(box-sizing, border-box);
+    @media screen and (min-width: $tablet) {
+        padding: 0 $standardSpacing;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 960px;
+    }
 }
 
 /** HEADER **/
@@ -17,6 +23,12 @@
     line-height: $lineHeight; /* Due to use of Fenix font */
     margin-bottom: 0.75em;
     text-align: center;
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+        overflow: hidden;
+        font-size: 3rem;
+        margin-bottom: 1em;
+    }
 }
 
 /** NAV **/
@@ -32,6 +44,9 @@
     }
 .site-nav {
     text-align: center;
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
     .site-nav li {
         margin-right: $standardSpacing;

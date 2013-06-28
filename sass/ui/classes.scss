@@ -48,6 +48,15 @@
         margin: 0 0 3em 0;
         *margin-bottom: $standardSpacing;
         @include prefix(perspective, 1100px);
+        @media screen and (min-width: $tablet) {
+            float: left;
+            margin-right: 1.5em;
+        }
+        &:nth-child(3) {
+            @media screen and (min-width: $desktop) {
+                margin-right: 0;
+            }
+        }
     }
     .portfolio__wrapper {
         position: absolute;
@@ -55,6 +64,11 @@
         width: 100%;
         @include prefix(transform-style, preserve-3d);
         @include prefix(transition, all 0.5s ease-in-out);
+        &:hover {
+            @media screen and (min-width: $tablet) {
+                @include prefix(transform, rotateY(180deg));
+            }
+        }
     }
     .portfolio__image {
         position: absolute;
@@ -83,4 +97,9 @@
     .portfolio__link {
         color: $white;
         text-decoration: underline;
+        &:hover {
+            @media screen and (min-width: $tablet) {
+                color: $white;
+            }
+        }
     }
