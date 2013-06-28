@@ -31,9 +31,9 @@ p, ul, ol {
 a {
     color: $standoutColour;
     text-decoration: none;
-}
-a:hover {
-    color: $alternateColour;
+    &:hover {
+        color: $alternateColour;
+    }
 }
 abbr[title] {
     border: none;

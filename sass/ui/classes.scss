@@ -3,3 +3,84 @@
  *
  * CSS classes, abstractions etc.
  */
+
+/* SEPARATION ABSTRACTION */
+.separated {
+    border: none;
+    border-bottom: 1px solid $separateColour;
+    position: relative;
+
+    &:after {
+        content: '';
+        border-bottom: 1px solid $white;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+    }
+}
+
+.brand {
+    text-decoration: none;
+    color: $baseColour;
+}
+.aligned {
+    text-align: center;
+}
+.standout {
+    border: 1px solid $separateColour;
+    line-height: 0;
+    padding: 5px;
+}
+
+/** PORTFOLIO ITEMS **/
+.portfolio {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+    .portfolio__item {
+        float: left;
+        width: 18em; /* 288px */
+        height: 15em; /* 240px */
+        position: relative;
+        margin: 0 0 3em 0;
+        *margin-bottom: $standardSpacing;
+        @include prefix(perspective, 1100px);
+    }
+    .portfolio__wrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        @include prefix(transform-style, preserve-3d);
+        @include prefix(transition, all 0.5s ease-in-out);
+    }
+    .portfolio__image {
+        position: absolute;
+        @include prefix(backface-visibility, hidden);
+    }
+    .portfolio__info {
+        position: absolute;
+        background: $alternateColour;
+        background: rgba(90, 121, 139, 0.8);
+        height: 100%;
+        width: 100%;
+        color: $white;
+        padding: $standardSpacing;
+        *padding: 0.5em;
+        @include prefix(box-sizing, border-box);
+        @include prefix(backface-visibility, hidden);
+        @include prefix(transform, rotateY(180deg));
+    }
+    .portfolio__title {
+        color: $white;
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin-bottom: 1em; /* 1.5/1.5 */
+    }
+    .portfolio__link {
+        color: $white;
+        text-decoration: underline;
+    }
