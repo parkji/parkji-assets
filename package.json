@@ -1,0 +1,17 @@
+{
+  "name": "parkjiAssets",
+  "version": "0.0.1",
+  "description": "Assets for parkji websites",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/parkji/parkji-assets.git"
+  },
+  "author": "Ben Parker",
+  "bugs": {
+    "url": "https://github.com/parkji/parkji-assets/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.3.0"
+  }
+}
