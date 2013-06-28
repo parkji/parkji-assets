@@ -2,7 +2,9 @@
   "name": "parkjiAssets",
   "version": "0.0.1",
   "dependencies": {
-    "normalize-scss": "~2.1.0"
+    "normalize-scss": "~2.1.0",
+    "html5shiv": "~3.6.2",
+    "respond": "~1.2.0"
   },
   "ignore": [
     "**/.*",
