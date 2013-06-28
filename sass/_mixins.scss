@@ -1,0 +1,12 @@
+/**
+ * _mixins.scss
+ *
+ * Mixins
+ */
+@mixin prefix($property, $value) {
+    -webkit-#{$property}: $value;
+    -o-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    #{$property}: $value;
+}
