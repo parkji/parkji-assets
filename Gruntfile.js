@@ -5,7 +5,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.registerTask('default', ['sass', 'concat']);
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin']);
 
     /**
      * Grunt tasks config
@@ -29,6 +31,23 @@ module.exports = function(grunt) {
                     'components/respond/respond.min.js'
                 ],
                 dest: 'web/js/polyfills.js'
+            }
+        },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            prism: {
+                files: {
+                    'web/js/prism.min.js': ['components/prism/prism.js']
+                }
+            }
+        },
+        cssmin: {
+            prism: {
+                files: {
+                    'web/css/prism.min.css': ['components/prism/prism-okaidia.css']
+                }
             }
         },
         watch: {
