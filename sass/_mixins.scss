@@ -3,7 +3,7 @@
  *
  * Mixins
  */
-@mixin prefix($property, $value) {
+@mixin prefix($property, $value...) {
     -webkit-#{$property}: $value;
     -o-#{$property}: $value;
     -moz-#{$property}: $value;
