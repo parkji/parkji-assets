@@ -10,7 +10,8 @@
     border-bottom: 1px solid $separateColour;
     position: relative;
 
-    &:after {
+    // use :before so it doesn't clash with clearfix
+    &:before {
         content: '';
         border-bottom: 1px solid $white;
         position: absolute;
@@ -156,6 +157,27 @@
             }
         }
     }
+
+/** PAGINATION NAVIGATION **/
+.pagination {
+    overflow: hidden; /* To clear floats */
+}
+    .pagination__prev {
+        float: left;
+    }
+    .pagination__next {
+        float: right;
+    }
+
+/** MICRO CLEARFIX **/
+// see http://nicolasgallagher.com/micro-clearfix-hack/
+.cf {
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
 
 /**
  * Code styles

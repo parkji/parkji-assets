@@ -6,7 +6,7 @@
 .grid {
     width: 100%;
     position: relative;
-    overflow: hidden; /* To clear floats */
+    @extend .cf;
     @media screen and (min-width: $tablet) {
         left: -$standardSpacing * 2;
     }
