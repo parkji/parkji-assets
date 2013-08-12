@@ -3,17 +3,21 @@ module.exports = function(grunt) {
      * Load plugins
      */
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['clean', 'sass', 'concat', 'uglify', 'cssmin']);
 
     /**
      * Grunt tasks config
      */
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        clean: {
+            all: ['web/css/*', 'web/js/*']
+        },
         sass: {
             dist: {
                 options: {
@@ -46,7 +50,10 @@ module.exports = function(grunt) {
         cssmin: {
             prism: {
                 files: {
-                    'web/css/prism.min.css': ['components/prism/prism-okaidia.css']
+                    'web/css/styles.min.css': [
+                        'components/prism/prism-okaidia.css',
+                        'web/css/styles.min.css'
+                    ]
                 }
             }
         },
