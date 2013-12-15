@@ -55,3 +55,18 @@ abbr[title] {
 img {
     max-width: 100%;
 }
+table {
+    border-collapse: collapse;
+}
+th {
+    padding: $standardSpacing / 2 $standardSpacing / 2 $standardSpacing / 2 0;
+    font-weight: normal;
+    text-align: left;
+}
+tr {
+    border-bottom: 1px solid;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
