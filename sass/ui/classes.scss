@@ -185,17 +185,17 @@
         text-align: center;
         border: 1px dashed $alternateColour;
         @include prefix(transform, rotate(45deg));
-        @include linearGradient(#64869a, $alternateColour);
+        @include linearGradient($blueGradientLight, $alternateColour);
     }
         .template__banner--free {
             @extend .template__banner;
-            border-color: #007600;
-            @include linearGradient(#009000, #007600);
+            border-color: $greenGradientDark;
+            @include linearGradient($greenGradientLight, $greenGradientDark);
         }
         .template__banner--sale {
             @extend .template__banner;
-            border-color: #8b2300;
-            @include linearGradient(#a52900, #8b2300);
+            border-color: $redGradientDark;
+            @include linearGradient($redGradientLight, $redGradientDark);
         }
 
 /** PAGINATION NAVIGATION **/
@@ -225,3 +225,32 @@
 pre[class*=language-] {
     margin-bottom: $standardSpacing;
 }
+
+/** BUTTONS **/
+.btn {
+    display: inline-block;
+    color: $white;
+    border: 1px solid $alternateColour;
+    padding: $standardSpacing / 3 $standardSpacing / 2;
+    margin-bottom: $standardSpacing;
+    @include prefix(border-radius, 5px);
+    @include linearGradient($blueGradientLight, $alternateColour);
+
+    &:hover {
+        color: $white;
+        @include prefix(filter, brightness(110%));
+    }
+
+    &:active {
+        @include linearGradient($alternateColour, $blueGradientLight);
+    }
+}
+    .btn--alt {
+        @extend .btn;
+        border-color: $greenGradientDark;
+        @include linearGradient($greenGradientLight, $greenGradientDark);
+
+        &:active {
+            @include linearGradient($greenGradientDark, $greenGradientLight);
+        }
+    }

@@ -3,17 +3,24 @@
  *
  * Various common variables including measurements, colours etc.
  */
- $fontFamily: 'Fenix', serif;
- $standardSpacing: 1.5em;
- $lineHeight: 1.5;
+$fontFamily: 'Fenix', serif;
+$standardSpacing: 1.5em;
+$lineHeight: 1.5;
 
- /** Colours **/
- $baseColour: #09090B;
- $standoutColour: #FB601D;
- $alternateColour: #5A798B;
- $separateColour: #9CA09F;
- $white: #FFFFFF;
+/** Colours **/
+$baseColour: #09090B;
+$standoutColour: #FB601D;
+$alternateColour: #5A798B;
+$separateColour: #9CA09F;
+$white: #FFFFFF;
 
- /** Media Query sizes **/
- $tablet: 780px;
- $desktop: 1024px;
+/** Gradient colours **/
+$blueGradientLight: #64869a; // goes with $alternateColour
+$greenGradientLight: #009000;
+$greenGradientDark: #007600;
+$redGradientLight: #a52900;
+$redGradientDark: #8b2300;
+
+/** Media Query sizes **/
+$tablet: 780px;
+$desktop: 1024px;
