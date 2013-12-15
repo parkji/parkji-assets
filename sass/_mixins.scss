@@ -10,3 +10,11 @@
     -ms-#{$property}: $value;
     #{$property}: $value;
 }
+
+@mixin linearGradient($from, $to) {
+    // Graceful degredation
+    background: $to;
+    // Only need to prefix webkit, see http://lea.verou.me/2013/04/can-we-get-rid-of-gradient-prefixes/
+    background-image: -webkit-linear-gradient($from, $to);
+    background-image: linear-gradient($from, $to);
+}

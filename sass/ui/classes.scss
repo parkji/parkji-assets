@@ -178,7 +178,6 @@
     }
     .template__banner {
         color: $white;
-        background: $alternateColour;
         position: absolute;
         top: 20%;
         right: -30%;
@@ -186,16 +185,17 @@
         text-align: center;
         border: 1px dashed $alternateColour;
         @include prefix(transform, rotate(45deg));
+        @include linearGradient(#64869a, $alternateColour);
     }
         .template__banner--free {
             @extend .template__banner;
-            background: #007600;
             border-color: #007600;
+            @include linearGradient(#009000, #007600);
         }
         .template__banner--sale {
             @extend .template__banner;
-            background: #8b2300;
             border-color: #8b2300;
+            @include linearGradient(#a52900, #8b2300);
         }
 
 /** PAGINATION NAVIGATION **/
