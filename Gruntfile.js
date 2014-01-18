@@ -31,8 +31,8 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'components/html5shiv/dist/html5shiv.js',
-                    'components/respond/respond.min.js'
+                    'bower_components/html5shiv/dist/html5shiv.js',
+                    'bower_components/respond/respond.min.js'
                 ],
                 dest: 'web/js/polyfills.js'
             }
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             },
             prism: {
                 files: {
-                    'web/js/prism.min.js': ['components/prism/prism.js']
+                    'web/js/prism.min.js': ['bower_components/prism/prism.js']
                 }
             }
         },
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             prism: {
                 files: {
                     'web/css/styles.min.css': [
-                        'components/prism/prism-okaidia.css',
+                        'bower_components/prism/prism-okaidia.css',
                         'web/css/styles.min.css'
                     ]
                 }
