@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             prism: {
                 files: {
                     'web/css/styles.min.css': [
-                        'bower_components/prism/prism-okaidia.css',
+                        'bower_components/prism/themes/prism-okaidia.css',
                         'web/css/styles.min.css'
                     ]
                 }
