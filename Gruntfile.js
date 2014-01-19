@@ -43,7 +43,10 @@ module.exports = function(grunt) {
             },
             prism: {
                 files: {
-                    'web/js/prism.min.js': ['bower_components/prism/prism.js']
+                    'web/js/prism.min.js': [
+                        'bower_components/prism/prism.js',
+                        'javascripts/PrismHtmlHighlighter.js'
+                    ]
                 }
             }
         },
